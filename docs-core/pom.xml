@@ -14,6 +14,13 @@
   <packaging>jar</packaging>
   <name>Docs Core</name>
 
+  <distributionManagement>
+    <site>
+      <id>local</id>
+      <url>file:${project.build.directory}/site</url>
+    </site>
+  </distributionManagement>
+
   <dependencies>
     <!-- Persistence layer dependencies -->
     <dependency>
@@ -197,6 +204,11 @@
       <artifactId>h2</artifactId>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>org.apache.directory.server</groupId>
+          <artifactId>apacheds-all</artifactId>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
 
   <profiles>
